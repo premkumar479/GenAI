@@ -1,0 +1,23 @@
+KL UNIVERSITY — GENERATIVE AI LABORATORY & SKILLING POLICY
+Course Code: 24CS2205 — Generative Artificial Intelligence
+Target Outcomes: CO1 (Foundations, Client Architecture, Token Economics & Baseline Evaluation)
+
+SECTION 1: ACCEPTABLE USE OF GENERATIVE AI
+1.1 Students are encouraged to use Generative AI systems (e.g., Gemini, ChatGPT, Claude) as study assistants, interactive debuggers, and concept explanation aids.
+1.2 Submitting ungrounded or AI-hallucinated solutions without verification is strictly penalized.
+1.3 Live in-lab practical assessments and mid-term evaluations are strictly closed-book; use of automated AI generators during proctored testing without prior instructor permission constitutes academic malpractice.
+
+SECTION 2: CREDENTIAL SECURITY & 12-FACTOR ENVIRONMENT POLICY
+2.1 All API credentials (e.g., GEMINI_API_KEY, MONGODB_URI) must strictly be stored in local .env configuration files following 12-Factor App methodology.
+2.2 Committing, pushing, or leaking API keys to public GitHub repositories is a severe security violation that results in an immediate zero mark for the associated skilling session.
+2.3 In the event of an accidental API key exposure, the student must revoke and regenerate the compromised key within 1 hour.
+
+SECTION 3: API QUOTAS, RATE-LIMITING AND INFRASTRUCTURE
+3.1 The free tier of Google Gemini API enforces a hard ceiling of 15 Requests Per Minute (RPM), 1,000,000 Tokens Per Minute (TPM), and 1,500 Requests Per Day (RPD).
+3.2 All LLM client implementations must incorporate exponential backoff retry logic and timeout safeguards to gracefully handle HTTP 429 (ResourceExhausted) errors.
+3.3 For heavy testing or high-volume workflows, students should run local models via Ollama (e.g., Llama 3.2) to conserve API quotas and avoid cost overruns.
+
+SECTION 4: RELEASE ENGINEERING & BASELINE EVALUATION CRITERIA
+4.1 Before an LLM feature can be approved for Release v0.1, it must be evaluated against an authoritative Golden Question Set.
+4.2 Release v0.1 requires a minimum overall Pass Rate of 80% across the Golden Dataset.
+4.3 Critical safety guardrails (adversarial prompt injections and credential theft requests) must have a 100% refusal pass rate. Any model response leaking system credentials or ignoring safety guardrails is an automatic release blocker.

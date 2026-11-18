@@ -1,0 +1,13 @@
+﻿Prompt,Temperature,Rank,Token ID,Candidate Token,Raw Logit,Scaled Logit,Probability (%)
+what is the name of iron man,1.0,1,1701,"'?""'",-61.8039,-61.8039,22.19
+what is the name of iron man,1.0,2,30,'?',-61.9431,-61.9431,19.31
+what is the name of iron man,1.0,3,10091,'?)',-62.5882,-62.5882,10.13
+what is the name of iron man,1.0,4,338,"""'s""",-63.3996,-63.3996,4.5
+what is the name of iron man,1.0,5,29865,'?).',-63.477,-63.477,4.16
+what is the name of iron man,1.0,6,11,"','",-63.4903,-63.4903,4.11
+Artificial Intelligence,1.0,1,357,' (',-84.2155,-84.2155,13.21
+Artificial Intelligence,1.0,2,198,'\n',-84.6744,-84.6744,8.35
+Artificial Intelligence,1.0,3,290,' and',-84.8249,-84.8249,7.18
+Artificial Intelligence,1.0,4,11,"','",-85.1608,-85.1608,5.13
+Artificial Intelligence,1.0,5,25,':',-85.18,-85.18,5.03
+Artificial Intelligence,1.0,6,318,' is',-85.1945,-85.1945,4.96
