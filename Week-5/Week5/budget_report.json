@@ -1,17 +1,17 @@
 {
   "feature": {
-    "name": "Academic AI Q&A Assistant (RAG)",
-    "system_prompt_tokens": 450,
-    "schema_tokens": 150,
-    "user_prompt_tokens": 80,
-    "retrieval_context_tokens": 1400,
-    "output_tokens": 350,
-    "reasoning_headroom_tokens": 100,
-    "turns_per_session": 1,
-    "total_input_tokens": 2080,
-    "total_output_tokens": 450,
-    "total_tokens_per_invocation": 2530,
-    "cache_hit_rate": 0.4,
+    "name": "Automated Code Review Agent",
+    "system_prompt_tokens": 800,
+    "schema_tokens": 300,
+    "user_prompt_tokens": 120,
+    "retrieval_context_tokens": 3200,
+    "output_tokens": 700,
+    "reasoning_headroom_tokens": 250,
+    "turns_per_session": 2,
+    "total_input_tokens": 8840,
+    "total_output_tokens": 1900,
+    "total_tokens_per_invocation": 10740,
+    "cache_hit_rate": 0.25,
     "cache_discount": 0.5
   },
   "traffic": {
@@ -22,49 +22,49 @@
     "monthly_requests": 150000,
     "avg_rpm": 5.21,
     "peak_rpm": 15.62,
-    "peak_tpm": 39531.0,
-    "daily_tokens": 12650000,
-    "monthly_tokens": 379500000
+    "peak_tpm": 167812.0,
+    "daily_tokens": 53700000,
+    "monthly_tokens": 1611000000
   },
   "economics": [
     {
       "model": "Gemini 3.8 Flash",
       "provider": "Google AI",
-      "cost_per_request": 0.000261,
-      "cost_per_1k_requests": 0.261,
-      "daily_cost": 1.305,
-      "monthly_cost": 39.15,
-      "monthly_cache_savings": 4.499999999999996,
+      "cost_per_request": 0.001152375,
+      "cost_per_1k_requests": 1.152375,
+      "daily_cost": 5.761875,
+      "monthly_cost": 172.85625,
+      "monthly_cache_savings": 12.093750000000028,
       "is_local": false
     },
     {
       "model": "Gemini 3.5 Flash Lite",
       "provider": "Google AI",
-      "cost_per_request": 0.0001305,
-      "cost_per_1k_requests": 0.1305,
-      "daily_cost": 0.6525,
-      "monthly_cost": 19.575,
-      "monthly_cache_savings": 2.249999999999998,
+      "cost_per_request": 0.0005761875,
+      "cost_per_1k_requests": 0.5761875,
+      "daily_cost": 2.8809375,
+      "monthly_cost": 86.428125,
+      "monthly_cache_savings": 6.046875000000014,
       "is_local": false
     },
     {
       "model": "Gemini 3.8 Pro",
       "provider": "Google AI",
-      "cost_per_request": 0.00435,
-      "cost_per_1k_requests": 4.35,
-      "daily_cost": 21.75,
-      "monthly_cost": 652.5,
-      "monthly_cache_savings": 75.00000000000007,
+      "cost_per_request": 0.01920625,
+      "cost_per_1k_requests": 19.20625,
+      "daily_cost": 96.03125,
+      "monthly_cost": 2880.9375,
+      "monthly_cache_savings": 201.56249999999966,
       "is_local": false
     },
     {
       "model": "GPT-4o-mini",
       "provider": "OpenAI",
-      "cost_per_request": 0.000522,
-      "cost_per_1k_requests": 0.522,
-      "daily_cost": 2.61,
-      "monthly_cost": 78.3,
-      "monthly_cache_savings": 8.999999999999991,
+      "cost_per_request": 0.00230475,
+      "cost_per_1k_requests": 2.30475,
+      "daily_cost": 11.52375,
+      "monthly_cost": 345.7125,
+      "monthly_cache_savings": 24.187500000000057,
       "is_local": false
     },
     {
@@ -85,15 +85,15 @@
       "peak_rpm": 15.62,
       "rpm_usage_pct": 104.2,
       "tpm_limit": 1000000,
-      "peak_tpm": 39531.0,
-      "tpm_usage_pct": 4.0,
+      "peak_tpm": 167812.0,
+      "tpm_usage_pct": 16.8,
       "rpd_limit": 1500,
       "daily_requests": 5000,
       "rpd_usage_pct": 333.3,
       "status": "BREACH",
       "headroom": {
         "rpm": 0,
-        "tpm": 960469,
+        "tpm": 832188,
         "rpd": 0
       }
     },
@@ -103,15 +103,15 @@
       "peak_rpm": 15.62,
       "rpm_usage_pct": 1.6,
       "tpm_limit": 4000000,
-      "peak_tpm": 39531.0,
-      "tpm_usage_pct": 1.0,
+      "peak_tpm": 167812.0,
+      "tpm_usage_pct": 4.2,
       "rpd_limit": 50000,
       "daily_requests": 5000,
       "rpd_usage_pct": 10.0,
       "status": "SAFE",
       "headroom": {
         "rpm": 984,
-        "tpm": 3960469,
+        "tpm": 3832188,
         "rpd": 45000
       }
     },
@@ -121,15 +121,15 @@
       "peak_rpm": 15.62,
       "rpm_usage_pct": 0.4,
       "tpm_limit": 10000000,
-      "peak_tpm": 39531.0,
-      "tpm_usage_pct": 0.4,
+      "peak_tpm": 167812.0,
+      "tpm_usage_pct": 1.7,
       "rpd_limit": 500000,
       "daily_requests": 5000,
       "rpd_usage_pct": 1.0,
       "status": "SAFE",
       "headroom": {
         "rpm": 3984,
-        "tpm": 9960469,
+        "tpm": 9832188,
         "rpd": 495000
       }
     }
@@ -141,9 +141,14 @@
       "message": "Free tier limits breached (Gemini Free Tier (AI Studio)). You must upgrade to a Pay-as-you-go key before deploying to production."
     },
     {
+      "category": "Token Optimization",
+      "severity": "MEDIUM",
+      "message": "Large RAG context (3200 tokens). Implement chunk reranking or top-k truncation to reduce token bloat by 30-50%."
+    },
+    {
       "category": "Model Routing",
       "severity": "INFO",
-      "message": "Gemini Flash saves $613.35/month compared to Pro. Use Flash as the default tier, and route only complex reasoning queries to Pro."
+      "message": "Gemini Flash saves $2708.08/month compared to Pro. Use Flash as the default tier, and route only complex reasoning queries to Pro."
     }
   ]
 }
